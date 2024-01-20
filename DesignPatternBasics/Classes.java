@@ -28,4 +28,3 @@ public class User {
         System.out.println("Hi, my name is " + name);
     }
 } 
-
