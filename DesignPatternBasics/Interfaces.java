@@ -5,7 +5,7 @@
 public interface TaxCalculator {
     float calculateTax();
 }
- 
+
 public class TaxCalculator2023 implements TaxCalculator {
     @Override
     public float calculateTax() {
@@ -22,3 +22,10 @@ public class Main {
         return new TaxCalculator2023();
     }
 }
+
+/*
+ * Ya da polymorphism ile main methodu yaz: ???
+ * 
+ * TaxCalculator calculator = new TaxCalculator2023();
+ * calculator.calculateTax();
+*/
