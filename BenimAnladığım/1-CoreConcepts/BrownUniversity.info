@@ -37,8 +37,8 @@ public class CS15Mobile extends Car {
 // what would happen if we said this.drive() instead of super.drive()?  - StackOverflowError
 
 // Essentially, the Java compiler “walks up the class inheritance tree” from subclass to superclass until it either:
-// o finds the method, and calls it 
-// o doesn’t find the method, and generates a compile-time error
+// - finds the method, and calls it 
+// - doesn’t find the method, and generates a compile-time error
 
 // Polymorphism allows programmers to refer to instances of a subclass or a class which implements an interface as type
 // <superclass> or as type <interface>
