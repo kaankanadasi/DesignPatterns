@@ -22,11 +22,8 @@ public class Customer {
 }
 
 // Complete the OnlineCustomer class to inherit from Customer
-// It should have an email attribute,
-// a constructor with 3 arguments (name, address, email) that uses the super
-// constructor,
-// and an overridden toString() method that calls the super toString() method
-//  and then prints "\nEmail:" and the email variable.
+// It should have an email attribute, a constructor with 3 arguments (name, address, email) that uses the super constructor,
+// and an overridden toString() method that calls the super toString() method and then prints "\nEmail:" and the email variable.
 
 class OnlineCustomer extends Customer {
     private String email;
