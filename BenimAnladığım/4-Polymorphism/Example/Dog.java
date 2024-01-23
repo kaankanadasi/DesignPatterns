@@ -6,6 +6,13 @@ public class Dog extends Animal {
     public void eat() {
         System.out.println("nice");
     }
+    public void growl() {
+        System.out.println("Grrrrrr");
+    }
+    @Override
+    public void makeNoise() {
+        System.out.println("wof wof");
+    }
     public int getBreed() {
         return breed;
     }
