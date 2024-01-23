@@ -1,0 +1,64 @@
+// source [brown]: https://cs.brown.edu/courses/cs015/lecture/pdf/CS15.Lecture_7_Inheritance_and_Polymorphism.9.28.23.pdf
+
+// Interfaces are contracts that classes agree to
+//      - if a class chooses to implement given interface, it must define all methods declared in interface
+// Java interfaces - used to achieve abstraction and multiple inheritances in Java using Interface.
+
+// Polymorphism: a way of coding generically; reference instances of related classes as one generic type
+
+// Inheritance models an “is-a” relationship, inherits from = is-a
+// Interfaces model an “acts-as” relationship
+
+// Inheritance: assures that all subclasses of a superclass will have the superclass’ public capabilities automatically 
+// Interface: does not define methods, so all implementing classes must specify all capabilities outlined in interface
+
+// In overriding methods, return type must match that of the superclass’s method exactly
+
+// Keyword super may be used to invoke original inherited method from parent. While you can use super to call other methods
+// in the parent class, it’s strongly discouraged. use the this keyword instead; parent’s methods are inherited by the subclass
+
+// BU PARTI TAM ANLAMADIM
+// except when you are calling the parent’s method within the child’s method of the same name
+public class CS15Mobile extends Car {
+    public CS15Mobile() {
+    //code elided
+    }
+    @Override
+    public void drive() {
+        this.turnOnEngine();
+        this.drive();
+        this.addDotToMap();
+        super.drive();
+        super.drive();
+        this.addDotToMap();
+        this.turnOffEngine();
+    }
+}
+// what would happen if we said this.drive() instead of super.drive()?  - StackOverflowError
+
+// Essentially, the Java compiler “walks up the class inheritance tree” from subclass to superclass until it either:
+// o finds the method, and calls it 
+// o doesn’t find the method, and generates a compile-time error
+
+// Polymorphism allows programmers to refer to instances of a subclass or a class which implements an interface as type
+// <superclass> or as type <interface>
+
+In the following code, the HungerGames subclass extends the SurvivalGame superclass. SurvivalGame defines a play() method, and 
+HungerGames overrides that method.
+    - SurvivalGame game = new HungerGames();
+    - game.play();
+Whose play() method is being called?
+A. SurvivalGame
+B. HungerGames // answer
+
+// programmers typically don’t have access to auperclass’ code – they know what methods are available (i.e., their declarations)
+// but not how they’re implemented. Bu yüzden superclass'daki variable'ları private yapmak [encapsulation] önemli 
+// A class can provide controlled indirect access by defining public accessor and mutator methods for private instance variables,
+// setter should error-check received parameter(s) so it retains some control, e.g., don’t allow negative values 
+
+// superclass instance variables are initialized in its constructor but we don’t instantiate a superclass when we instantiate a subclass
+// Our call to super() creates one copy of the instance variables, located deep inside the subclass, but accessible to subclass 
+// only if class provides setters/getter 
+
+// If you don’t explicitly call super() first thing in your constructor, Java compiler automatically calls it, passing no arguments
+// But if superclass’s constructor requires an argument, you’ll get an error!
