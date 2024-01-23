@@ -6,6 +6,9 @@ public class Animal {
     public void eat() {
         System.out.println("yum yum");
     }
+    public void makeNoise() {
+        System.out.println("I'm an animal");
+    }
     // getter method
     public String getName() {
         return name;
