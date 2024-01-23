@@ -1,6 +1,9 @@
 // source: https://www.javatpoint.com/runtime-polymorphism-in-java
 
 class Animal {  
+    public void sound() {
+        System.out.println("sounding");
+    }
     void eat() {
         System.out.println("eating");
     }  
@@ -24,5 +27,6 @@ class BabyDog extends Dog {
         a1.eat(); // eating
         a2.eat(); // eating fruits
         a3.eat(); // drinking Milk
+        a3.sound(); // sounding [looks at the class hierarcy]
     }  
 }  
