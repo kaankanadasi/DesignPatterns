@@ -23,7 +23,7 @@ public class Main {
     }
 }
 
-public class Shape {
+public class Shape extends Object {
     private String color; // encapsulation, we don't want subclasses to reach to variables that easly; accessor methods are for that
 
     public Shape() {
@@ -82,4 +82,3 @@ public class Circle extends Ellipse {
         super(color, center, avarageRadious);
     }
 }
-
