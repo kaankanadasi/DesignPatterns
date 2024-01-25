@@ -61,6 +61,7 @@ public class App {
     private String type;
 
     public App(double gb, String type) {
+        super();
         this.gb = gb;
         this.type = type;
     }
@@ -99,5 +100,23 @@ public class Main {
     public static void main(String[] args) {
         App twitter = new X(12.2, "news", 10, "Elon Musk");
         twitter.again(); // prints: something toString method news
+    }
+}
+
+
+-------------------------------------
+
+class MyBaseClass extends Object {
+}
+class MySubClass extends MyBaseClass {
+    public void someMethod() {
+        String result = super.toString(); // Calls Object's toString
+        System.out.println(result);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        MySubClass a = new MySubClass();
+        a.someMethod(); // returns: MySubClass@<hashcode>
     }
 }
