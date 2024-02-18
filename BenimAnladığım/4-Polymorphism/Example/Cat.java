@@ -11,7 +11,6 @@ public class Cat extends Animal {
     }
 
     // method overloading is a kind of polymorphism  - methods that share the same name but have different parameters 
-    @Overload
     public void eat(int numTimes, String food) { 
         for(int i = 0; i < numTimes; i++) {
             System.out.print("yum yum " + food + " - ");
