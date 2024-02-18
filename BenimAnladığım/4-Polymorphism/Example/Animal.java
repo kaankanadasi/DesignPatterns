@@ -1,8 +1,7 @@
 // superclass/parent class
 public class Animal {
     private String name;
-    private String color;
-
+    
     public void eat() {
         System.out.println("yum yum");
     }
