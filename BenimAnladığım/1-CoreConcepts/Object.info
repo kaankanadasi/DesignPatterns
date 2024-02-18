@@ -1,0 +1,7 @@
+Object class is the supefclass of all classes except Object class
+
+It is the superclass of everything that can be instantiated by the java runtime. That includes both:
+  - classes you write (custom classes), as well as
+  - classes provided by the Java language itself.
+
+Java only support single class (or implementation) inheritance (in conjunction with multiple interface (or type) inheritance.
