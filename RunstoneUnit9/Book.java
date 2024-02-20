@@ -2,14 +2,14 @@ public class Book {
     private String ISBN = "something";
 
     public String getISBN() {
-        return ISBN;
+        return ISBN; // implementation not shown  
     }
     // constructors, fields, and other methods not shown
-}
 
-public class Dictionary extends Book {
-    public String getDefinition() {
-        // implementation not shown
+    public class Dictionary extends Book {
+        public String getDefinition() {
+            return "..."; // implementation not shown  
+        }
     }
 }
 
