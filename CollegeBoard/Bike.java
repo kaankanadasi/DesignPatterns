@@ -6,19 +6,19 @@ public class Bike {
     public int getNumOfWheels() {
         return numOfWheels;
     }
+
+    public class EBike extends Bike{
+        private int numOfWatts;
+    
+        public EBike(int watts) {
+            numOfWatts = watts;
+        }
+        public int getNumOfWatts() {
+            return numOfWatts;
+        }
+    }
 }
 
-public class EBike extends Bike{
-    private int numOfWatts;
-
-    public EBike(int watts) {
-        numOfWatts = watts;
-    }
-
-    public int getNumOfWatts() {
-        return numOfWatts;
-    }
-}
 
 /*
  * Bike b = new EBike(250);
