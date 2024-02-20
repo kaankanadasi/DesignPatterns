@@ -9,18 +9,20 @@ public class Base {
     public void methodTwo() {
         System.out.print("B");
     }
+
+    public class Derived extends Base {
+        public void methodOne() {
+            super.methodOne();
+            System.out.print("C");
+        }
+        public void methodTwo() {
+            super.methodTwo();
+            System.out.print("D");
+        }
+    }
 }
 
-public class Derived extends Base {
-    public void methodOne() {
-        super.methodOne();
-        System.out.print("C");
-    }
-    public void methodTwo() {
-        super.methodTwo();
-        System.out.print("D");
-    }
-}
+
 
 // Output: ABDC
 // methodOne() içindeki methodTwo() çağırıldığında bu ilk başta Derived subclass'ının içindeki super.methodTwo()'ya gidiyor, 
@@ -35,4 +37,4 @@ public class Derived extends Base {
  * super class (Base) named methodTwo. This method prints the letter "B" and then returns. Next the execution returns from the 
  * call to the super.methodTwo and prints the letter "D". We return to the Base class methodOne and return from that to the 
  * Derived class methodOne and print the letter "C".
- */
+*/
