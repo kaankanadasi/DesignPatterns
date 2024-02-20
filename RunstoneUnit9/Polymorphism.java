@@ -23,30 +23,33 @@ public class Polymorphism {
     // declared type: Object, run-time/actual type: String
     Object message = new String("hi");
     // message.indexOf("h"); COMPILER ERROR!! Object class does not have an indexOf method.
+
+
+    public class Student {
+        public String getFood() {
+            return "Pizza";
+        }
+    
+        public String getInfo() {
+            return this.getFood();
+        }
+    
+        public static void main(String[] args) {
+            Student s1 = new GradStudent();
+            System.out.println(s1.getInfo()); // prints: Taco
+            // Even though the getInfo method is in Student when getFood is called the run-time will look for that 
+            // method first in the class that created this object which in this case is the GradStudent class.
+        }
+    }
+    
+    class GradStudent extends Student {
+        public String getFood() {
+            return "Taco";
+        }
+    }
+    
 }
 
-public class Student {
-    public String getFood() {
-        return "Pizza";
-    }
-
-    public String getInfo() {
-        return this.getFood();
-    }
-
-    public static void main(String[] args) {
-        Student s1 = new GradStudent();
-        System.out.println(s1.getInfo()); // prints: Taco
-        // Even though the getInfo method is in Student when getFood is called the run-time will look for that 
-        // method first in the class that created this object which in this case is the GradStudent class.
-    }
-}
-
-class GradStudent extends Student {
-    public String getFood() {
-        return "Taco";
-    }
-}
 
 
 /*
