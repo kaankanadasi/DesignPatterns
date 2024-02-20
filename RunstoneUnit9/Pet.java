@@ -11,11 +11,9 @@ public class Pet {
     public String getType() {
         return type;
     }
-
     public String getName() {
         return name;
     }
-
     public void speak() {
         System.out.println("grr!");
     }
@@ -41,7 +39,6 @@ class Dog extends Pet {
     public Dog(String name) {
         super(name, "dog");
     }
-    
     public void speak() {
         System.out.println("Woof!");
     }
@@ -54,9 +51,7 @@ class Cat extends Pet {
     public Cat(String name) {
         super(name, "cat");
     }
-    
     public void speak() {
         System.out.println("Meow!");
     }
 }
-
