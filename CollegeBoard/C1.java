@@ -8,15 +8,18 @@ public class C1 {
 
     public void m2()
     { System.out.print("B"); }
+
+    
+    public class C2 extends C1 {
+        public C2()
+        { /* implementation not shown */ }
+    
+        public void m2()
+        { System.out.print("C"); }
+    }
 }
 
-public class C2 extends C1 {
-    public C2()
-    { /* implementation not shown */ }
 
-    public void m2()
-    { System.out.print("C"); }
-}
 /* 
  * C1 obj1 = new C2();
  * obj1.m1();
