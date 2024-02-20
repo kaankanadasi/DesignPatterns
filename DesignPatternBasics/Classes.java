@@ -8,12 +8,6 @@
    command line and pass a few arguments, we can capture those arguments using the string array
 */
 public class Classes {
-    public class Main {
-        public static void main(String[] args) {
-            User user = new User("Mosh"); 
-            user.sayHello();
-        }
-    }
 
     public class User {
         // Fields (attributes)
@@ -28,4 +22,9 @@ public class Classes {
             System.out.println("Hi, my name is " + name);
         }
     } 
+
+    public static void main(String[] args) {
+        User user = new User("Mosh"); 
+        user.sayHello();
+    }
 }
