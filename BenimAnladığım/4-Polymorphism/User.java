@@ -25,7 +25,7 @@ class PremiumUser extends User {
     }
 }
 
-class NormalUser extends User{
+class NormalUser extends User {
     public NormalUser(String name) {
         super(name);
     }
