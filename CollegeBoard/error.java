@@ -1,7 +1,7 @@
 package CollegeBoard;
 
 public class error {
-    ArrayList<int> intList = new ArrayList<int>();
+    // ArrayList<int> intList = new ArrayList<int>();
     // compile error: we cannot use a primitive (int) as the type parameter in a generic ArrayList
 }
 
