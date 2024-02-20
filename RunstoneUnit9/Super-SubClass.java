@@ -1,4 +1,4 @@
-class Rectangle {
+public class Rectangle {
     private int length;
     private int width;
 
@@ -49,7 +49,7 @@ public class Square extends Rectangle {
 
 // 5. Define the LongRectangle class here
 //    Do not make it public because only 1 class with main can be public in 1 file.
-class LongRectangle extends Rectangle {
+public class LongRectangle extends Rectangle {
     public LongRectangle(int length, int width) {
         super(length, width);
     }
