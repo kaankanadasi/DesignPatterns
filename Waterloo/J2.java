@@ -1,5 +1,4 @@
 package Waterloo;
-
 import java.util.Scanner;
 
 public class J2 {
