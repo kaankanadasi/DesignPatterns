@@ -27,6 +27,7 @@ public class J3 {
             }
         }
 
+        // finding the third highest score
         int thridHighest = ar[0];
         int count = 0; 
         for(int n = 0; n < ar.length-1; n++) {
@@ -38,6 +39,7 @@ public class J3 {
             }
         }
 
+        // counting the number of third highest score
         int thridCount = 0;
         for(int score : ar) {
             if (score == thridHighest) {
