@@ -1,38 +1,51 @@
 package Waterloo.Waterloo2024;
-import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Collections;
+
+// https://cccgrader.com/getproblem.php?fid=1101455&authcode=a9057f1284ef34425e213093a9c09162
 
 public class J3 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int N = scan.nextInt();
-        ArrayList<Integer> ar = new ArrayList<Integer>();
+        int[] ar = new int[N];
 
-        for(int i=0; i<N; i++) {
+        // initializing the values in the array
+        for(int i = 0; i < N; i++) {
             int score = scan.nextInt();
-            ar.add(score);
+            ar[i] = score;
         }
 
-        Collections.sort(ar);
-        Collections.reverse(ar);
-
-        int count = 0;
-        int check = 0;
-        int countThird = 0;
-        for(int n=1; n<ar.size(); n++) {
-            if(ar.get(check) > ar.get(n)) {
-                check = n;
-                count++;
-                if((count == 2) && (ar.get(check) == ar.get(n))) {
-                        countThird++;
-                }
-                if(count == 2) {
-                    System.out.println(ar.get(n) + " " + countThird);
+        // sorting in descending order
+        for(int j = 0; j < ar.length; j++) {
+            for(int z = j+1; z < ar.length; z++) {
+                int temp = 0;
+                if(ar[j] < ar[z]) {
+                    temp = ar[j];
+                    ar[j] = ar[z];
+                    ar[z] = temp;
                 }
             }
         }
-        
+
+        int thridHighest = ar[0];
+        int count = 0; 
+        for(int n = 0; n < ar.length-1; n++) {
+            if(ar[n] > ar[n+1]) {
+                count++;
+            }
+            if(count == 2) {
+                thridHighest = ar[n+1];
+            }
+        }
+
+        int thridCount = 0;
+        for(int score : ar) {
+            if (score == thridHighest) {
+                thridCount++;
+            }
+        }
+
+        System.out.println(thridHighest + " " + thridCount);
         scan.close();
     }
 }
