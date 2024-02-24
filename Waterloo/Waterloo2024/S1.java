@@ -2,6 +2,8 @@ package Waterloo.Waterloo2024;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+// https://cccgrader.com/getproblem.php?fid=1101460&authcode=93f22c5845e76a0997b4206e3c20610e
+
 public class S1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
