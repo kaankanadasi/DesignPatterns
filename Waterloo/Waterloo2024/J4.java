@@ -8,18 +8,21 @@ public class J4 {
         // quiet key -> not displayed
         // silly key -> falsely types
         Scanner scan = new Scanner(System.in);
-        String initialInput = scan.nextLine();
-        String finalInput = scan.nextLine();
+        String initialInput = scan.nextLine().toLowerCase();
+        String finalInput = scan.nextLine().toLowerCase();
 
         // ikisini array'e almak???;
 
-        // OLMAZ. sıkıntı lengthlerinin aynı olmama durumu
-        for(int i=0; i<initialInput.length(); i++) {
+        char quietKey = ' ';
+        char sillyKey = ' ';
+        for(int i=0; i<initialInput.length()-1; i++) {
             if(initialInput.charAt(i) != finalInput.charAt(i)) {
-                System.out.println(initialInput.charAt(i) + " " + finalInput.charAt(i));
-                break;
+                if(initialInput.charAt(i+1) != finalInput.charAt(i+1)) {
+                    quietKey = initialInput.charAt(i);
+                } 
             }
         }
         scan.close();
+        System.out.println(quietKey + " " + sillyKey);
     }
 }
