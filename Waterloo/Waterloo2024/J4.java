@@ -15,20 +15,20 @@ public class J4 {
             int x = 0;
             for(int i=0; i<initialInput.length(); i++) {
                 if(initialInput.charAt(i) != finalInput.charAt(i)) {
-                    x = i;
+                    x = i; // eğer size aynı ise silly key'in yeri iki inputta da aynı olacak 
                 }
             }
             System.out.println(initialInput.charAt(x) + " " + finalInput.charAt(x));
             System.out.println("-");
 
         } else {
-            int q=0;
-            int d=0;
-            int z=0;
-            int f=0;
+            int q = 0;
+            int d = 0;
+            int z = 0;
+            int f = 0;
             for (int i = 0; i < finalInput.length(); i++) {
                 if (initialInput.indexOf(finalInput.charAt(i)) == -1) {
-                    q = i;
+                    q = i; // stores the index of the first character in finalInput that does not exist in initialInput
                 }
             }
             boolean n = true;
@@ -45,7 +45,7 @@ public class J4 {
                         }
                     }
                 }
-                f = f + 1;
+                f += 1;
             }
             for (int i = 0; i < initialInput.length(); i++) {
                 if (initialInput.charAt(i) != initialInput.charAt(d)) {
