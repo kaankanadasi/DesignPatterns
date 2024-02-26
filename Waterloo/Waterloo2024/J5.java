@@ -9,7 +9,7 @@ public class J5 {
         int row = scan.nextInt();
         int column = scan.nextInt();
 
-        Character[][] map = new Character[column][row];
+        char[][] map = new char[column][row];
 
         for(int i=0; i<column; i++) {
             String pump = scan.nextLine();
