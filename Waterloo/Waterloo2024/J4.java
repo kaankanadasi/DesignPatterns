@@ -1,7 +1,7 @@
 package Waterloo.Waterloo2024;
 import java.util.Scanner;
 
-// https://cccgrader.com/getproblem.php?fid=1101456&authcode=79add7606a1afc4075ad21ac0a4b5636
+// YSC çözümü:
 
 public class J4 {
     public static void main(String[] args) {
@@ -11,18 +11,52 @@ public class J4 {
         String initialInput = scan.nextLine().toLowerCase();
         String finalInput = scan.nextLine().toLowerCase();
 
-        // ikisini array'e almak???;
-
-        char quietKey = ' ';
-        char sillyKey = ' ';
-        for(int i=0; i<initialInput.length()-1; i++) {
-            if(initialInput.charAt(i) != finalInput.charAt(i)) {
-                if(initialInput.charAt(i+1) != finalInput.charAt(i+1)) {
-                    quietKey = initialInput.charAt(i);
-                } 
+        if(initialInput.length() == finalInput.length()) {
+            int x = 0;
+            for(int i=0; i<initialInput.length(); i++) {
+                if(initialInput.charAt(i) != finalInput.charAt(i)) {
+                    x = i;
+                }
             }
+            System.out.println(initialInput.charAt(x) + " " + finalInput.charAt(x));
+            System.out.println("-");
+
+        } else {
+            int q=0;
+            int d=0;
+            int z=0;
+            int f=0;
+            for (int i = 0; i < finalInput.length(); i++) {
+                if (initialInput.indexOf(finalInput.charAt(i)) == -1) {
+                    q = i;
+                }
+            }
+            boolean n = true;
+            while (n) {
+                if (f == finalInput.length()) {
+                    d = initialInput.length() - 1;
+                    n = false;
+                }
+                if (f != finalInput.length()) {
+                    if (finalInput.charAt(f) != finalInput.charAt(q)) {
+                        if (finalInput.charAt(f) != initialInput.charAt(f)) {
+                            d = f;
+                            n = false;
+                        }
+                    }
+                }
+                f = f + 1;
+            }
+            for (int i = 0; i < initialInput.length(); i++) {
+                if (initialInput.charAt(i) != initialInput.charAt(d)) {
+                    if (finalInput.indexOf(initialInput.charAt(i)) == -1) {
+                        z = i;
+                    }
+                }
+            }
+            System.out.println(initialInput.charAt(z) + " " + finalInput.charAt(q));
+            System.out.println(initialInput.charAt(d));
         }
-        scan.close();
-        System.out.println(quietKey + " " + sillyKey);
+        scan.close(); 
     }
 }
