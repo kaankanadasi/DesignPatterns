@@ -18,8 +18,8 @@ public class J5 {
             }
         }
 
-        int manX = scan.nextInt();
-        int manY = scan.nextInt();
+        // int manX = scan.nextInt();
+        // int manY = scan.nextInt();
 
         // olmaz:
         // for() loop x+, -x ve +y, -y posisyonlarına giderken "*" var mı diye bak 
