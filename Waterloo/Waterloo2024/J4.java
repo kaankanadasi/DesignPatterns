@@ -34,7 +34,7 @@ public class J4 {
             boolean n = true;
             while (n) {
                 if (f == finalInput.length()) { 
-                    // if true-> the loop has iterated through all characters in finalInput, and there are no differing characters found
+                    // if true - the loop has iterated through all characters in finalInput, and there are no differing characters found
                     d = initialInput.length() - 1;
                     n = false; // terminate the loop
                 } else { 
@@ -51,7 +51,7 @@ public class J4 {
             for (int i = 0; i < initialInput.length(); i++) {
                 if (initialInput.charAt(i) != initialInput.charAt(d)) {
                     if (finalInput.indexOf(initialInput.charAt(i)) == -1) {
-                        z = i; // stoes the index of the extra character in initialInput that does not exist in finalInput
+                        z = i; // stores the index of the extra character in initialInput that does not exist in finalInput
                     }
                 }
             }
