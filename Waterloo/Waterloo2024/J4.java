@@ -33,24 +33,25 @@ public class J4 {
             }
             boolean n = true;
             while (n) {
-                if (f == finalInput.length()) {
+                if (f == finalInput.length()) { 
+                    // if true-> the loop has iterated through all characters in finalInput, and there are no differing characters found
                     d = initialInput.length() - 1;
-                    n = false;
-                }
-                if (f != finalInput.length()) {
+                    n = false; // terminate the loop
+                } else { 
+                    // if the loop hasn't reached the end of the finalInput
                     if (finalInput.charAt(f) != finalInput.charAt(q)) {
                         if (finalInput.charAt(f) != initialInput.charAt(f)) {
-                            d = f;
-                            n = false;
+                            d = f; // index of the first differing character in initialInput
+                            n = false; // terminate the loop
                         }
                     }
                 }
-                f += 1;
+                f += 1; // to move to the next character in finalInput
             }
             for (int i = 0; i < initialInput.length(); i++) {
                 if (initialInput.charAt(i) != initialInput.charAt(d)) {
                     if (finalInput.indexOf(initialInput.charAt(i)) == -1) {
-                        z = i;
+                        z = i; // stoes the index of the extra character in initialInput that does not exist in finalInput
                     }
                 }
             }
