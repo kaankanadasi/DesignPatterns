@@ -21,11 +21,6 @@ public class J5 {
         // int manX = scan.nextInt();
         // int manY = scan.nextInt();
 
-        // olmaz:
-        // for() loop x+, -x ve +y, -y posisyonlarına giderken "*" var mı diye bak 
-        // if(there is "x") stop && if(row-manX==6 and columns - manY == 6) { stop }
-
-
         scan.close();
     }
 }
