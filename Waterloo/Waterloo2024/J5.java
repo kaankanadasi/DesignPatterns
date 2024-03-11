@@ -1,4 +1,3 @@
-package Waterloo.Waterloo2024;
 import java.util.Scanner;
 
 // https://cccgrader.com/getproblem.php?fid=1101457&authcode=28d70512cee3442f6e649832cf58bf81
